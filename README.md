@@ -15,10 +15,11 @@ Enjoy!
 
 This project is heavily inspired by the aesthetic of Apple Inc.'s classic Mac OS.
 
-RiskyDE uses two fonts that are licensed under the OFL (SIL Open Font License). They are:
+RiskyDE uses two fonts that are licensed under the OFL (SIL Open Font License). These fonts, as well as many others, can be found at the [Font Library](https://fontlibrary.org/en)
+
+These fonts are:
 * Fifteen Narrow by **Zeimusu**
 * Press Start 2P by **Cody \'CodeMan38\' Boisclair**
-These fonts, as well as many others, can be found at the [Font Library](https://fontlibrary.org/en)
 
 ## License
 
