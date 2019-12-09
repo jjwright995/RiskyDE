@@ -9,11 +9,16 @@ Enjoy!
 
 ## Author
 
-* **Justin Wright** - *Initial Work* - [jjwright995](https://github.com/jjwright995)
+* **Justin Wright** - [jjwright995](https://github.com/jjwright995)
 
-## Acknowledgments
+## Attributions and Acknowledgments
 
 This project is heavily inspired by the aesthetic of Apple Inc.'s classic Mac OS.
+
+RiskyDE uses two fonts that are licensed under the OFL (SIL Open Font License). They are:
+* Fifteen Narrow by **Zeimusu**
+* Press Start 2P by **Cody \'CodeMan38\' Boisclair**
+These fonts, as well as many others, can be found at the [Font Library](https://fontlibrary.org/en)
 
 ## License
 
