@@ -1,0 +1,44 @@
+@keyframes blackscreen {
+	0% {background-color: #ffffff;}
+	50% {animation-timing-function: steps(1, end); background-color: #ffffff;}
+	100% {background-color: #000000;}
+}
+
+body {
+	background-color: #000000;
+	padding: 0;
+	margin: 0;
+	width: 800px;
+	height: 600px;
+}
+
+.desktop {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	width: inherit;
+	height: inherit;
+}
+
+.bootup {
+	animation-name: blackscreen;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	background-image: url("../res/boot.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	width: inherit;
+	height: inherit;
+}
+
+p {
+	color: #ffffff;
+	font-family: FifteenNarrow;
+	font-size: 16px;
+	text-align: center;
+	position: relative;
+}

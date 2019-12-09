@@ -1,0 +1,62 @@
+/* General Window formatting */
+
+.windowdiv {
+	margin: 0;
+	padding: 0;
+}
+
+.titlebar {
+	background-color: #fff;
+	border: 2px outset #000;
+	border-style: none outset outset none;
+	padding: 0;
+	margin: 0 auto;
+	overflow: hidden;
+	height: 28px;
+}
+
+.titlebar p {
+	color: #000;
+	font-family: PressStart;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 8px;
+}
+
+.detailbar {
+	background-color: #fff;
+	border: 2px outset #000;
+	border-style: none outset none none;
+	padding: 0;
+	margin: 0 auto;
+	height: 32px;
+}
+
+.detailbar p {
+	border-bottom: 4px double #000;
+	color: #000;
+	font-family: FifteenNarrow;
+	font-size: 16px;
+	margin-top: 0;
+	text-align: center;
+}
+
+.wincontent {
+	background-color: #fff;
+	border: 2px outset #000;
+	border-style: none outset outset none;
+	padding: 0;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.wincontent p {
+	color: #000;
+	font-family: FifteenNarrow;
+	font-size: 16px;
+}
+
+hr {
+	border: 1px solid #000;
+	border-bottom: none;
+}
