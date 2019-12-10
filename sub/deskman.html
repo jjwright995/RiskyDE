@@ -2,22 +2,18 @@
 <html>
   <head>
   <link rel="stylesheet" href="css/risky-main.css">
-  <script src="js/topbar.js"></script>
+  <script src="js/multi.js"></script>
   <title>RiskyDE</title>
   </head>
 <body>
   <div class="desktop">
-    <div class="taskbar">
-      <ul class="topbar">
-        <li class="menubtn" onclick="showMenu()">
-          <img src="res/icons/menu.png">
-        </li>
-      </ul>
+    <div class="menubar">
+      <img src="res/icons/menu.png" style="cursor: default" onclick="showMenu()">
     </div>
     <div id="openMenu" style="display: none">
       <div class="dropmenu-content">
-        <img src="res/icons/open.png" style="float: left">
-        <a href="apps/about.html">About RiskyDE...</a>
+        <a onclick="openAbout()">About RiskyDE...</a>
+        <a href="#" style="text-decoration: line-through">Launch an app...</a>
       </div>
     </div>
   </div>
