@@ -42,3 +42,8 @@ p {
 	text-align: center;
 	position: relative;
 }
+
+@font-face {
+	font-family: FifteenNarrow;
+	src: url("fonts/fifteen-narrow.ttf");
+}
