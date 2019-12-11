@@ -5,17 +5,15 @@ This is the public repository for TGnF's RiskyDE (where "DE" stands for "Desktop
 RiskyDE is an HTML-based desktop environment. I created it to satisfy my desire of designing a vintage GUI.
 That being said, I am not known for developing GUIs... Your experience may vary.
 
+If you'd like to give it a try, follow [this link.](https://jjwright995.github.io/RiskyDE/)
+
 Enjoy!
-
-## Author
-
-* **Justin Wright** - [jjwright995](https://github.com/jjwright995)
 
 ## Attributions and Acknowledgments
 
 This project is heavily inspired by the aesthetic of Apple Inc.'s classic Mac OS.
 
-RiskyDE uses two fonts that are licensed under the OFL (SIL Open Font License). These fonts, as well as many others, can be found at the [Font Library](https://fontlibrary.org/en)
+RiskyDE uses two fonts that are licensed under the OFL (SIL Open Font License). These fonts, as well as many others, can be found at the [Font Library.](https://fontlibrary.org/en)
 
 These fonts are:
 * Fifteen Narrow by **Zeimusu**
