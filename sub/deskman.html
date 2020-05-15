@@ -1,29 +1,45 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <link rel="stylesheet" href="css/risky-main.css">
     <link rel="stylesheet" href="css/risky-win.css">
     <script src="js/multi.js"></script>
-  <title>RiskyDE</title>
+  <title>RDE - Deskman</title>
   </head>
-<body>
-  <div class="desktop">
-    <div class="menubar">
-      <img src="res/icons/menu.png" alt="An icon of three squares, which opens the main menu when clicked." style="cursor: default" onclick="showMenu()">
-      <img src="res/icons/favicon.png" alt="An icon of a cartoon face, which indicates the Desktop Manager is open." style="float: right">
-    </div>
-    <div id="openMenu" style="display: none">
-      <div class="dropmenu-content">
-        <a onclick="openAbout()">About RiskyDE...</a>
-        <a href="#" style="text-decoration: line-through" onclick="document.getElementById('noapp').style.display = 'block'">Open the Chooser...</a>
+  <body ondragstart="return false" ondrop="return false">
+    <div class="desktop">
+      <div class="menubar">
+        <img src="res/icons/menu.png" alt="An icon of three squares within each other, which opens the main menu when clicked." style="cursor: default;" onclick="showMenu()">
+        <img src="res/icons/deskman.png" alt="An icon of a computer monitor, which indicates the Desktop Manager is open." style="float: right">
+      </div>
+      <div id="openMenu" style="display: none;">
+        <div class="dropmenu-content">
+          <a onclick="window.location.replace('apps/about.html')">About RiskyDE...</a>
+          <a onclick="window.location.replace('apps/design-guide.html')">Design Guide...</a>
+          <a onclick="document.getElementById('appInfo').style.display = 'block'; document.getElementById('openMenu').style.display = 'none';">Open the Chooser...</a>
+        </div>
+      </div>
+      <div id="appInfo" style="display: none;">
+        <div class="wincontent" style="width: 580px; height: 128px; margin-top: 32px;">
+          <img src="robby/robby.png" style="float: left">
+          <p style="margin: 0;">Robby sez...<br><br>Hey there.<br>Some apps aren't ready for testin' yet. Thanks fer waitin'.</p>
+        </div>
+        <div class="windowdiv" style="margin-top: 32px;">
+          <div class="titlebar" style="width: 320px;">
+            <p>Chooser</p>
+          </div>
+          <div class="detailbar" style="width: 320px;">
+            <p>One application found.</p>
+          </div>
+          <div class="wincontent" style="width: 320px; height: 200px;">
+            <figure class="appicon" onclick="window.location.replace('apps/riskytyper.html')">
+              <img src="apps/riskytyper/launch.png">
+              <figcaption>riskyTyper</figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
     </div>
-    <div id="noapp" class="wincontent" style="display: none; width: 580px; height: 128px; margin-top: 32px">
-      <img src="robby/res/robby.png" style="float: left">
-      <p>Robby sez...<br><br>"Sorry, there are no completed applications available for testing yet."</p>
-    </div>
-  </div>
-</body>
+  </body>
 </html>

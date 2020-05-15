@@ -7,7 +7,9 @@ That being said, I am not known for developing GUIs... Your experience may vary.
 
 If you'd like to give it a try, follow [this link.](https://jjwright995.github.io/RiskyDE/)
 
-Enjoy!
+I'd love to hear any suggestions or feedback regarding RiskyDE. Please open an issue with a specific feature request!
+
+Thanks, and enjoy!
 
 ## Attributions and Acknowledgments
 

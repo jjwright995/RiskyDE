@@ -10,8 +10,3 @@ function showMenu() {
 function closeApp() {
   window.location.replace("../deskman.html");
 }
-
-/* The following javascript handles redirects to apps. They are intended to leave no history. */
-function openAbout() {
-  window.location.replace("apps/about.html");
-}

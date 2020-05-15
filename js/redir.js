@@ -1,1 +1,1 @@
-setTimeout("window.location.replace('sub/bootup.html')",3000);
+setTimeout("window.location.replace('sub/splash.html')",3000);

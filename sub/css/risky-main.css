@@ -1,7 +1,7 @@
 ﻿body {
 	background: #000;
 	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 	width: 800px;
 	height: 600px;
 	overflow: hidden;
@@ -9,15 +9,15 @@
 	-moz-user-select: none;
 }
 
-/* Errors...? */
+/* 
+@media only screen and (max-width: 1920px) {
+    body {
+		transform: scale(2);
+		transform-origin: 0 0;
+    }
+} */
 
-.err000001 {
-	background-image: url("res/err/000001.png");
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-/* Fonts */
+/* Fonts and related classes */
 
 @font-face {
 	font-family: FifteenNarrow;
@@ -34,11 +34,12 @@
 .desktop {
 	background: url("../res/dot.png") repeat;
 	position: absolute;
-	top: 50%;
+	/* Obsolete code, previously used for perfect centering of the container */
+	/* top: 50%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	-moz-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%); */
 	width: inherit;
 	height: inherit;
 	z-index: 1;
@@ -53,12 +54,6 @@
 	z-index: 1;
 }
 
-a {
-	color: #000;
-	font-family: FifteenNarrow;
-	font-size: 16px;
-	padding: 0;
-}
 
 /* Taskbar-related classes */
 
@@ -108,46 +103,4 @@ a {
 .dropmenu-content a:hover {
 	background-color: #000;
 	color: #fff;
-}
-
-/* Tooltips */
-
-.robbycorner {
-	display: block;
-	position: absolute;
-	bottom: 0;
-	z-index: 3;
-}
-
-.robbytooltip {
-	display: inline-block;
-	position: relative;
-}
-
-.tooltext {
-	background-color: #fff;
-	color: #000;
-	font-family: FifteenNarrow;
-	opacity: 0;
-	padding: 8px 0;
-	position: absolute;
-	right: 50%;
-	bottom: 125%;
-	text-align: center;
-	visibility: hidden;
-	width: 160px;
-	z-index: 3;
-}
-
-.tooltext:hover {
-	opacity: 1;
-	visibility: visible;
-}
-
-/* Robby Sez... */
-
-.robbytext {
-	color: #000;
-	font-family: PressStart;
-	font-size: 14px;
 }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/risky-main.css">
+    <link rel="stylesheet" href="../css/risky-win.css">
+    <link rel="stylesheet" href="riskytyper/additional.css">
+    <script src="../js/multi.js"></script>
+    <script src="riskytyper/main.js"></script>
+    <title>riskyTyper</title>
+  </head>
+  <body ondragstart="return false" ondrop="return false">
+    <div class="desktop">
+      <div class="menubar">
+        <a style="cursor: default" onclick="closeApp()"><img src="../res/icons/close.png" alt="An icon of a square with a line through it, which closes this app and returns to the Desktop Manager."></a>
+        <img src="../res/icons/app.png" alt="An icon of a computer monitor, which indicates that an app is open." style="float: right">
+      </div>
+      <div class="main">
+        <div class="windowdiv">
+          <div class="titlebar" style="margin-top: 8px; width: 680px;">
+            <p>riskyTyper</p>
+          </div>
+          <div class="detailbar" style="width: 680px;">
+            <p>This app will support additional features later in development</p>
+          </div>
+          <div class="wincontent" style="width: 680px; height: 340px;">
+            <input style="display: none;" type="text">
+            <textarea id="content" cols="80" rows="20" onkeypress="charCount()">Features currently in development for riskyTyper include easily saving a .txt or .rtf file of your work, a character counter in the detailbar, adding images and advanced formatting.</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

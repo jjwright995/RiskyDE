@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/risky-main.css">
+    <link rel="stylesheet" href="../css/risky-win.css">
+    <script src="../js/multi.js"></script>
+    <title>RDE - Design Guide</title>
+  </head>
+  <body ondragstart="return false" ondrop="return false">
+    <div class="desktop">
+      <div class="menubar">
+        <a style="cursor: default" onclick="closeApp()"><img src="../res/icons/close.png" alt="An icon of a square with a line through it, which closes this app and returns to the Desktop Manager."></a>
+        <img src="../res/icons/app.png" alt="An icon of a computer monitor, which indicates that an app is open." style="float: right">
+      </div>
+      <div class="main">
+        <div class="windowdiv">
+          <div class="titlebar" style="margin-top: 8px; width: 640px;">
+            <p>The RiskyDE Design Guide</p>
+          </div>
+          <div class="detailbar" style="width: 640px;">
+            <p>This content has been authored by Justin Wright</p>
+          </div>
+          <div class="wincontent" style="width: 640px; height: 400px;">
+            <img style="display: block; margin: 0 auto;" id="top" src="../res/logo.png">
+            <p class="headersmall">Welcome to RiskyDE.</p>
+            <p class="headersmall">This software was written by Justin Wright of TGnF, from 2018-2020.</p>
+            <hr>
+            <div class="windowdiv" style="width: 580px; margin: 0 auto;">
+              <h1 style="margin-bottom: 0; text-align: center;">Design Guide for RiskyDE</h1>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you'd like to develop an application for RiskyDE, I recommend you follow the guidelines listed below for user interface (UI) consistency. This guide will also get you set up from writing an app from scratch.</p>
+              <p style="text-align: center;"><strong>While I continuously update RiskyDE, please check back at this page, as I will tweak things and add features in the future.</strong></p>
+            </div>
+            <hr>
+            <div class="windowdiv" style="width: 580px; margin: 0 auto;">
+              <h2 style="margin-bottom: 0; text-align: center;">Table of Contents</h2>
+              <a href="#one"><br>1. File Creation</a>
+              <a href="#two"><br>2. Basic Window Design</a>
+              <a href="#three"><br>3. Setting Up the Director</a>
+            </div>
+            <hr>
+            <div class="windowdiv" style="width: 580px; margin: 0 auto;">
+              <h2 style="margin-bottom: 0; text-align: center;" id="one">1. File Creation</h2>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First and most importantly, <strong> thank you for your interest in developing an app for RiskyDE.</strong> I find developing RiskyDE to be a rewarding experience. Hopefully you will, too.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To begin, you must create an .html file named after the app you wish to design. This file goes into the '~/sub/apps' directory<sup>1</sup>. Along with this file, create a folder, also named after the app, and place it in the same directory as the .html file<sup>2</sup>. You will use this folder for storing resources for the app, such as javascript and graphics. If you choose to do so, you can copy the contents of the <code>template.html</code> file found within the '~/sub/extras' directory.</p>
+              <p style="text-align: center;"><em>This file is available for the convenience of developers. It contains the barebones of a RiskyDE application, including the menubar, close button, and the main container where windows are displayed. If you don't wish to copy the file, take a look at the contents. It shows the proper syntax for a RiskyDE app.</em></p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once you have the contents of <code>template.html</code> copied over, you'll need to name the application window. This name must be typed within the '<code>title</code>' field, where <code>null</code> is. This will help the user identify which window is opened in RiskyDE.</p>
+              <p><sup><br>1. The root directory of RiskyDE is marked as '~' in this documentation.</sup></p>
+              <p><sup>2. This directory is known as an appdata folder. You should place the license for your app in the root of this folder.</sup></p>
+              <a href="#top"><em>Return to the top</em></a>
+              <hr>
+            </div>
+            <div class="windowdiv" style="width: 580px; margin: 0 auto;">
+              <h2 style="margin-bottom: 0; text-align: center;" id="two">2. Basic Window Design</h2>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While creating your application, keep in mind that RiskyDE is designed to <strong>only run one application at a time.</strong> This is due to the very low resolution RiskyDE utilizes, which is SVGA, or 800x600 pixels. Also, <strong>consider leaving space above or below your application window for a small dialog box</strong>, if the application requires it. At this time, RiskyDE does not support overlapping dialog boxes.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now, let's think about the application we wish to create. It is recommended to always have a title bar, excluding dialog boxes. Will your application require a detail bar? Let's look at the code that makes up the design of a standard window.</p>
+                <div class="windowdiv" style="width: 420px; margin: 0 auto;">
+                  <p>Class name: <code>windowdiv</code><br>Purpose: Required. Removes any margin or padding automatically added to containers with this class.</p>
+                  <p>Class name: <code>wincontent</code><br>Purpose: Required. Sets background color, border and overflow values of the window.</p>
+                  <p>Class name: <code>titlebar</code><br>Purpose: Recommended. Sets font values for the name of the window.</p>
+                  <p>Class name: <code>detailbar</code><br>Purpose: Optional. Sets font values and border for the portion below the <code>titlebar</code>.</p>
+                </div>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While these classes already do some of the work for us, <strong>we will need to set certain values, such as the width and height of the window</strong>. Every developer is different; we all have ways that we express ourselves through code. I recommend you look at the source for any application included in RiskyDE, and you'll see how I format the windows.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>The following recommendations are important</strong> for maintaining consistency and ease of use.</p>
+              <div class="windowdiv" style="width: 420px; margin: 0 auto;">
+                <p>1. Always place important UI controls in obvious locations.</p>
+                <p>2. Never drastically change the way the user interacts with RiskyDE.</p>
+                <p>3. If your app requires a help file, try to write the documentation to be as clear as possible.</p>
+              </div>
+              <a href="#top"><br><em>Return to the top</em></a>
+              <hr>
+            </div>
+            <div class="windowdiv" style="width: 580px; margin: 0 auto;">
+              <h2 style="margin-bottom: 0; text-align: center;" id="three">3. Setting Up the Director</h2>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The way users launch apps built for RiskyDE is through <strong>the Chooser</strong>. The Chooser is a dialog box that holds a Director, or a link to each app. Each Director must have a unique icon and label. <strong>The Director icon for your app should be stored in its appdata folder.</strong> You can then assign a Director entry in the Chooser that links to the icon.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To add a Director to the Chooser, you need to create a <code>figure</code> element, and assign the class <code>appicon</code> to it. Next, add the <code>onclick</code> attribute after the declared class, and add this line in-between the quotation marks: <code>window.location.replace('apps/REPLACE_ME.html')</code><sup>3</sup>. This short javascript command redirects to the app without leaving history on the user's browser. This is an intentional design choice of RiskyDE.</p>
+              <p><sup><br>3. Be sure to replace the text 'REPLACE_ME' with the name of your app's html page.</sup></p>
+              <a href="#top"><br><em>Return to the top</em></a>
+            </div>
+            <div class="windowdiv" style="width: 580px; margin: 0 auto;">
+              <h2 style="margin-bottom: 0; text-align: center;">Conclusion</h2>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After following this documentation, you should be able to get started on your app. If you have any additional questions, please open an issue from within GitHub on the following repository.<a target="_blank" href="https://github.com/jjwright995/RiskyDE">jjwright995 / RiskyDE</a></p>
+              <p style="text-align: center;">Happy coding!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
